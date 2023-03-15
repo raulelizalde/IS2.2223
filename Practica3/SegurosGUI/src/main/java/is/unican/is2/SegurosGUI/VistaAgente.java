@@ -16,6 +16,12 @@ import javax.swing.JList;
 
 import javax.swing.border.LineBorder;
 
+import is.unican.is2.SegurosCommon.Cliente;
+import is.unican.is2.SegurosCommon.IGestionClientes;
+import is.unican.is2.SegurosCommon.IGestionSeguros;
+import is.unican.is2.SegurosCommon.IInfoSeguros;
+import is.unican.is2.SegurosCommon.Seguro;
+
 import java.awt.Color;
 import javax.swing.JButton;
 

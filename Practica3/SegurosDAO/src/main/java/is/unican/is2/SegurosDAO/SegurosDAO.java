@@ -5,6 +5,10 @@ package is.unican.is2.SegurosDAO;
 import java.util.LinkedList;
 import java.util.List;
 
+import is.unican.is2.SegurosCommon.Cliente;
+import is.unican.is2.SegurosCommon.ISegurosDAO;
+import is.unican.is2.SegurosCommon.Seguro;
+
 public class SegurosDAO implements ISegurosDAO {
 	
 	private Aseguradora aseguradora;

@@ -1,3 +1,5 @@
+package is.unican.is2.SegurosCommon;
+
 import javax.xml.bind.annotation.XmlEnum;
 
 /**
