@@ -36,7 +36,7 @@ public class Seguro {
     
     @XmlAttribute(required = true)
     private Cobertura cobertura;
-    
+     
     @XmlAttribute(name="fecha", required=true)
     @XmlJavaTypeAdapter(value = LocalDateAdapter.class)
     private LocalDate fechaContratacion;
@@ -93,7 +93,36 @@ public class Seguro {
      * @return
      */
     public double precio() {
-    	return 0;
+    	Cobertura c = getCobertura();
+    	int p = getPotencia();
+    	double precio = 0;
+    	//calculamos precio de cobertura
+    	if (c == Cobertura.TERCEROS) {
+    		precio += 400;
+    	} else if (c == Cobertura.TERCEROSLUNAS) {
+    		precio += 600;
+    	} else if (c == Cobertura.TODORIESGO) {
+    		precio += 1000;
+    	}
+    	
+    	//calculamos por potencia
+    	if (p >= INICIO_TRAMO_1 && p <= FIN_TRAMO_1) {
+    		precio = precio * 1.05;
+    	} else if (p > FIN_TRAMO_1) {
+    		precio = precio * 1.2;
+    	}
+    	
+    	//oferta años
+    	if (precio == 0) {
+    		precio = precio * DESCUENTO_PRIMER_ANHO;
+    	} else{
+    		precio = precio * DESCUENTO_SEGUNDO_ANHO;
+    	}
+    	
+    	//minusvalia
+    	
+    	
+    	return precio;
     }
 
 }

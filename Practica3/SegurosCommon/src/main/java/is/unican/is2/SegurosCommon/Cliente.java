@@ -96,7 +96,13 @@ public class Cliente {
      * todos los seguros a su nombre
      */
     public double totalSeguros() {
+    	double suma = 0;
+    	for (Seguro s: seguros) {
+    		suma += s.precio();
+    	}
     	return 0;
     }
+    
+    
 
 }
