@@ -3,9 +3,6 @@ package is.unican.is2.Seguro.gestion;
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.time.LocalDate;
-import java.util.Date;
-
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import is.unican.is2.SegurosCommon.Seguro;

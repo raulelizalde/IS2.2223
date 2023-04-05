@@ -42,12 +42,15 @@ public class Seguro {
     @XmlJavaTypeAdapter(value = LocalDateAdapter.class)
     private LocalDate fechaContratacion;
     
+    double precio;
+    
     public Seguro(int potencia, String matricula, LocalDate fechaContratacion, Cobertura cobertura) {
     	this.potencia = potencia;
     	this.matricula = matricula;
     	this.fechaContratacion = fechaContratacion;
     	this.cobertura = cobertura;
     }
+
 
 	/**
 	 * Retorna la matrícula del coche 
@@ -101,6 +104,10 @@ public class Seguro {
     public void setFechaContratacion(LocalDate dia) {
     	this.fechaContratacion = dia;
     }
+    
+    public void setPrecio(double nuevoPrecio) {
+    	precio = nuevoPrecio;
+    }
     /**
      * Retorna el precio del seguro
      * @return
@@ -108,7 +115,7 @@ public class Seguro {
     public double precio() {
     	Cobertura c = getCobertura();
     	int p = getPotencia();
-    	double precio = 0;
+    	precio = 0;
     	//calculamos precio de cobertura
     	if (c == Cobertura.TERCEROS) {
     		precio += 400;

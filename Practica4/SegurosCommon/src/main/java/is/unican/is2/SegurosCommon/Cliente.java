@@ -32,7 +32,11 @@ public class Cliente {
     private boolean minusvalia;
     
     
-    public Cliente(){}  
+    public Cliente(String nombre, String dni, boolean minusvalia){
+    	this.nombre = nombre;
+    	this.dni = dni;
+    	this.minusvalia = minusvalia;
+    }  
 
 	/**
      * Retorna los seguros del cliente 
@@ -91,6 +95,10 @@ public class Cliente {
     	minusvalia = minus;
     }
     
+    public void añadirSeguro(Seguro seguro) {
+    	seguros.add(seguro);
+    }
+    
     /**
      * Calcula el total a pagar por el cliente por 
      * todos los seguros a su nombre
@@ -98,7 +106,11 @@ public class Cliente {
     public double totalSeguros() {
     	double suma = 0;
     	for (Seguro s: seguros) {
-    		suma += s.precio();
+    		if(this.getMinusvalia()) {
+    			suma += s.precio() * 0.75;
+    		} else {
+    			suma += s.precio();
+    		}
     	}
     	return suma;
     }
