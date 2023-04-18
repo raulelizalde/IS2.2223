@@ -48,12 +48,6 @@ class vistaTest extends JFrame{
 		// Comprobamos la salida
 		demo.textBox("txtNombreCliente").requireText("Lucia Rodriguez");
 		
-		/*
-		// Prueba de saludo sin nombre
-		demo.textBox("txtNombre").setText("");
-		demo.button("btnPulsar").click();
-		demo.textBox("txtSaludo").requireText("Hola!");
-		*/
 		
 		// Sleep para visualizar como se realiza el test
 		try {

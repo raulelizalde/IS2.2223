@@ -46,28 +46,6 @@ class clienteTest {
 		assertEquals(cliente3.totalSeguros(), 750);
 	}
 	
-	/*
-	@Test
-	public void testValido11() {
-		seguro2.datosSeguro(89, "123456780", LocalDate.now().minusDays(745), Cobertura.TERCEROSLUNAS);
-		cliente2.creaDatos("moni", "12345678F", false);
-		cliente2.añadirSeguro(seguro2);
-		//caso valido
-		assertEquals(cliente2.totalSeguros(), 600);
-	}
-	
-	@Test
-	public void testValido12() {
-		cliente3.creaDatos("alba", "12345678G", true);
-		seguro2.datosSeguro(89, "123456780", LocalDate.now().minusDays(745), Cobertura.TERCEROSLUNAS);
-		seguro1.datosSeguro(70, "123456789", LocalDate.now().minusDays(745), Cobertura.TERCEROS);
-
-		cliente3.añadirSeguro(seguro2);
-		cliente3.añadirSeguro(seguro1);
-		//caso valido
-		assertEquals(cliente3.totalSeguros(), 750);
-	}
-	*/
 	
 	@Test
 	public void testNoValido1() {
