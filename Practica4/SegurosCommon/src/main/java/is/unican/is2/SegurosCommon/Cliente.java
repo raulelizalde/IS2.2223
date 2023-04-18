@@ -32,12 +32,14 @@ public class Cliente {
     private boolean minusvalia;
     
     
-    public Cliente(String nombre, String dni, boolean minusvalia){
+    public Cliente(){
+    }  
+
+    public void creaDatos(String nombre, String dni, boolean minusvalia){
     	this.nombre = nombre;
     	this.dni = dni;
     	this.minusvalia = minusvalia;
     }  
-
 	/**
      * Retorna los seguros del cliente 
      */

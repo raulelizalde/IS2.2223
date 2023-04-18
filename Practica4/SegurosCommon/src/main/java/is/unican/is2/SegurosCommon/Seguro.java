@@ -44,7 +44,10 @@ public class Seguro {
     
     double precio;
     
-    public Seguro(int potencia, String matricula, LocalDate fechaContratacion, Cobertura cobertura) {
+    public Seguro() {
+    }
+    
+    public void datosSeguro(int potencia, String matricula, LocalDate fechaContratacion, Cobertura cobertura) {
     	this.potencia = potencia;
     	this.matricula = matricula;
     	this.fechaContratacion = fechaContratacion;
