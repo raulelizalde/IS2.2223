@@ -26,13 +26,7 @@ public class Cliente {
 	public double getSaldoTotal() {
 		double total = 0.0;
 		for (Cuenta c: Cuentas) {  //wmc + 1 //Ccog +1
-			if (c instanceof CuentaAhorro) { //wmc + 1 //Ccog + 2
-				total += ((CuentaAhorro) c).getSaldo();
-			} else if (c instanceof CuentaValores)  { //wmc + 1 //CCog + 1
-				for (Valor v: ((CuentaValores) c).getValores()) { //wmc + 1 //CCog + 3
-					total += v.getCotizacion()*v.getNumValores();
-				}
-			}
+			total += c.calculaTotal();
 		}
 		return total;
 	}

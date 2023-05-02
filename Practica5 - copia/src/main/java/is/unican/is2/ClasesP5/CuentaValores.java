@@ -25,4 +25,11 @@ public class CuentaValores extends Cuenta {
 		return true;
 	}//wmc +1
 	
+	public double calculaTotal() {
+		for (Valor v: this.getValores()) { //wmc + 1 //CCog + 1
+			totalCuenta += v.getCotizacion()*v.getNumValores();
+		}
+		return totalCuenta;
+	}
+	
 }

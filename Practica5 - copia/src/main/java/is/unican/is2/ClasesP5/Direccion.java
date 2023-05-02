@@ -10,7 +10,7 @@ public class Direccion {
 		this.calle = calle;
 		this.zip = zip;
 		this.localidad = localidad;
-	}
+	}//wmc+1
 	
 	public void cambiaDireccion(String calle, String zip, String localidad) {
 		this.calle = calle;

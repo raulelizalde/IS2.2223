@@ -1,8 +1,9 @@
-package is.unican.is2.ClasesP5;
+package is.unican.is2.ClasesP5; 
 
-public class Cuenta {
+public abstract class Cuenta {
 	
 	private String numCuenta;
+	protected double totalCuenta;
 	
 	public Cuenta(String numCuenta) {
 		this.numCuenta = numCuenta;
@@ -11,5 +12,9 @@ public class Cuenta {
 	public String getNumCuenta() {
 		return numCuenta;
 	}//wmc +1
+	
+	public double calculaTotal() {
+		return totalCuenta;
+	}
 	
 }

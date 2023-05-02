@@ -11,6 +11,7 @@ public class Credito extends Tarjeta {
 	private double mCredito;
 	private List<Movimiento> mMovimientosMensuales;
 	private List<Movimiento> mhistoricoMovimientos;
+	private final static double COMISION = 0.05;
 	
 	
 	public Credito(String numero, String titular, CuentaAhorro c, double credito) {
@@ -35,7 +36,7 @@ public class Credito extends Tarjeta {
 		LocalDateTime now = LocalDateTime.now();
 		m.setFecha(now);
 		m.setConcepto("Retirada en cajero automático");
-		x += x * 0.05; // Añadimos una comisión de un 5%
+		x += x * COMISION; // Añadimos una comisión de un 5%
 		m.setImporte(-x);
 		
 		if (getGastosAcumulados()+x > mCredito)//wmc +1 //CCog + 1
