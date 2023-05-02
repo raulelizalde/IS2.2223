@@ -97,11 +97,5 @@ public class CuentaAhorro extends Cuenta {
 		return limiteDebito;
 	}//wmc +1
 	
-	private void comprobacionCantidad(double x) {
-		if (getSaldo() < x)//wmc +1 //CCog + 1
-			throw new saldoInsuficienteException("Saldo insuficiente");
-		if (x <= 0)//wmc +1 //CCog + 1
-			throw new datoErroneoException("No se puede retirar una cantidad negativa");
-	}
 
 }
